@@ -1,0 +1,202 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #efefef;
+}
+.color0 {
+  background: #6f98a8;
+}
+.color1 {
+  background: #2b8ead;
+}
+.color2 {
+  background: #2f454e;
+}
+
+.color3 {
+  background: #6f98a8;
+}
+.color4 {
+  background: #ffffff;
+}
+.color5 {
+  background: #bfbfbf;
+}
+.color6 {
+  background: #efefef;
+}
+.color7 {
+  background: #2f454e;
+}
+.color8 {
+  background: #72c3dc;
+}
+
+header {
+  height: 10%;
+}
+.container {
+  display: flex;
+  background: #efefef;
+  height: calc(100% - 30%);
+}
+h1 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+}
+/* h3 {
+  display: flex;
+  justify-content: center;
+} */
+.main-container {
+  flex: 4;
+}
+.main-container h1 {
+  display: flex;
+  justify-content: center;
+}
+.main-container .tabcontainer {
+  display: flex;
+  padding: 0px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-container .tabcontainer button {
+  padding: 15px 15px;
+  width: 33%;
+  position: relative;
+  font-size: 30px;
+  border: 0px;
+  color: #ffffff;
+  height: 75.84%;
+}
+
+.left-container {
+  flex: 1;
+}
+
+.left-container div {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+
+.btn {
+  padding: 20px;
+  margin: 20px 10px;
+  width: 150px;
+  border-radius: 10px;
+  box-sizing: content-box;
+  border: none;
+  box-shadow: 0px 2px black;
+  color: #ffffff;
+  background: #2b8ead;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+footer {
+  position: relative;
+  height: 10%;
+}
+
+h3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  font-style: italic;
+  background: #efefef;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .color0 {
+    background: linear-gradient(to right, #c6c8c9 5%, #efefef 0%);
+  }
+  .color1 {
+    background: linear-gradient(to right, #2b8ead 5%, #efefef 0%);
+  }
+  .color2 {
+    background: linear-gradient(to right, #2f454e 5%, #efefef 0%);
+  }
+
+  .color3 {
+    background: linear-gradient(to right, #6f98a8 5%, #efefef 0%);
+  }
+  .color4 {
+    background: #ffffff;
+    background: linear-gradient(to right, #c6c8c9 5%, #efefef 0%);
+  }
+  .color5 {
+    background: #bfbfbf;
+    background: linear-gradient(to right, #c6c8c9 5%, #efefef 0%);
+  }
+  .color6 {
+    background: #efefef;
+    background: linear-gradient(to right, #c6c8c9 5%, #efefef 0%);
+  }
+  .color7 {
+    background: #2f454e;
+    background: linear-gradient(to right, #c6c8c9 5%, #efefef 0%);
+  }
+  .color8 {
+    background: #72c3dc;
+    background: linear-gradient(to right, #c6c8c9 5%, #efefef 0%);
+  }
+  .container {
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+    background: #fff;
+    border: 10px solid black;
+  }
+  .left-container div {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-container .tabcontainer button {
+    width: 100%;
+    color: #000000;
+    height: auto;
+  }
+  h1 {
+    color: #ffffff;
+    background: #000000;
+    padding: 20px;
+    margin: 0px;
+  }
+  h3 {
+    display: flex;
+    justify-content: center;
+  }
+  .btn {
+    padding: 20px;
+    margin: 20px 10px;
+    width: 150px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    border: none;
+    box-shadow: 0px 2px black;
+  }
+
+  #additems > div {
+    width: 100%;
+  }
+  #additems > div button {
+    margin-bottom: 5px;
+  }
+}

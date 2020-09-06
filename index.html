@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header><h1>Shuffle and Sort</h1></header>
+
+    <div class="container">
+      <div class="main-container">
+        <div class="tabcontainer" id="additems"></div>
+      </div>
+      <div class="left-container">
+        <div>
+          <button class="btn" id="enter" type="submit">
+            shuffle
+          </button>
+          <button class="btn" id="sort" type="submit">sort</button>
+        </div>
+      </div>
+    </div>
+    <footer><h3>Shuffle and sort by {{Insert Your Name Here}}</h3></footer>
+    <script>
+      var node = document.createElement('div')
+      node.className = 'listAllItems'
+      var itemslists = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      node.innerHTML = itemslists
+        .map((i) => {
+          return `<button class='color${Math.round(
+            (i * 10) / 30,
+          )}'>${i}</button>`
+        })
+        .join('')
+      var node1 = document.getElementById('additems').appendChild(node)
+      document.querySelector('#enter').addEventListener(
+        'click',
+        function (event) {
+          itemslists.sort(function (a, b) {
+            return 0.5 - Math.random()
+          })
+          var points = itemslists
+            .map((items, index) => {
+              return `<button class='color${Math.round(
+                (items * 10) / 30,
+              )}' >${items}</button>`
+            })
+            .join('')
+          document.getElementById(
+            'additems',
+          ).innerHTML = `<div className="listAllItems">${points}</div>`
+        },
+        false,
+      )
+
+      document.querySelector('#sort').addEventListener(
+        'click',
+        function (event) {
+          itemslists.sort(function (a, b) {
+            return a - b
+          })
+          var points = itemslists
+            .map((items, index) => {
+              return `<button class='color${Math.round(
+                (items * 10) / 30,
+              )}'>${items}</button>`
+            })
+            .join('')
+          document.getElementById(
+            'additems',
+          ).innerHTML = `<div className="listAllItems">${points}</div>`
+        },
+        false,
+      )
+    </script>
+  </body>
+</html>
